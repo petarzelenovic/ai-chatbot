@@ -45,16 +45,24 @@
 </template>
 
 <script setup lang="ts">
+import type { ChatMessage, Chat } from "~/types";
 import ChatInput from "./ChatInput.vue";
 
-const { chat, sendMessage, messages } = useChat();
+// const { chat, sendMessage, messages } = useChat();
+
+const props = defineProps<{
+  messages: ChatMessage[];
+  chat: Chat;
+}>();
+const emit = defineEmits(["send-message"]);
+
 const { showScrollButton, scrollToBottom, pinToBottom } = useChatScroll();
 
 function handleSendMessage(message: string) {
-  sendMessage(message);
+  emit("send-message", message);
 }
 
-watch(() => messages, pinToBottom, { deep: true });
+watch(() => props.messages, pinToBottom, { deep: true });
 </script>
 
 <style scoped>
