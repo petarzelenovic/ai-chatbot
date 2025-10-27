@@ -2,8 +2,8 @@
   <ChatWindow
     :chat="chat"
     :messages="messages"
-    @send-message="handleSendMessage"
     :typing="typing"
+    @send-message="handleSendMessage"
   />
 </template>
 
