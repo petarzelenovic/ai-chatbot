@@ -13,8 +13,10 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.56",
     "@nuxt/eslint": "1.9.0",
     "@nuxt/ui": "^4.1.0",
+    "ai": "^5.0.81",
     "eslint": "^9.38.0",
     "nuxt": "^4.2.0",
     "vue": "^3.5.22",
