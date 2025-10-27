@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxtjs/mdc"],
+  modules: ["@nuxt/ui", "@nuxt/eslint"],
 
   runtimeConfig: {
     openaiApiKey: "",
